@@ -156,9 +156,9 @@ section { padding: var(--section-gap) 0; border-bottom: 1px solid var(--border);
 
 /* Arrow buttons - inside the zone, no own positioning needed */
 .carousel-btn {
-  width: 40px; height: 40px; background: rgba(255,255,255,0);
+  width: 60px; height: 60px; background: rgba(255,255,255,0);
   border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
-  opacity: 0; transition: opacity 0.2s, background 0.2s;
+  opacity: 0.2; transition: opacity 0.2s, background 0.2s;
   border-radius: 50%; padding: 0; flex-shrink: 0;
 }
 .carousel:hover .carousel-btn { opacity: 1; }
@@ -167,18 +167,18 @@ section { padding: var(--section-gap) 0; border-bottom: 1px solid var(--border);
 /* Dots */
 .carousel-dots {
   position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
-  display: flex; gap: 6px; opacity: 0; transition: opacity 0.2s; z-index: 3;
+  display: flex; gap: 8px; opacity: 0.3; transition: opacity 0.2s; z-index: 3;
 }
 .carousel:hover .carousel-dots { opacity: 1; }
 .dot {
   width: 8px; height: 8px; border-radius: 50%;
-  background: rgba(0,0,0,0.4); border: none; cursor: pointer; padding: 0;
-  transition: background 0.2s;
+  background: rgba(0,0,0,0.5); border: none; cursor: pointer; padding: 0;
+  transition: background 0.1s;
 }
-.dot.active { background: rgba(0,0,0,0.65); }
+.dot.active { background: rgba(0,0,0,1); }
 
 /* -- About -- */
-.about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; margin-bottom: 0.1rem; }
+.about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; margin-bottom: 0; }
 @media (max-width: 600px) { .about-grid { grid-template-columns: 1fr; } }
 .about-bio p { font-size: var(--size-md); color: var(--muted); line-height: 1.75; }
 .about-bio p + p { margin-top: 1em; }
