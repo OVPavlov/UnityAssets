@@ -19,7 +19,7 @@
   --border:  #e8e8e8;
   --surface: #f7f7f7;
 
-  --max-width:   840px;
+  --max-width:   950px;
   --pad:         clamp(1.25rem, 5vw, 2.5rem);
   --section-gap: 5rem;
 }
@@ -37,7 +37,7 @@ body {
 
 .page { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--pad); }
 
-/* ── Nav ── */
+/* -- Nav -- */
 nav {
   position: sticky; top: 0;
   background: var(--bg);
@@ -54,27 +54,27 @@ nav {
 .nav-right a { font-size: var(--size-sm); color: var(--muted); text-decoration: none; }
 .nav-right a:hover { color: var(--text); }
 
-/* ── Hero ── */
+/* -- Hero -- */
 .hero { padding: 5rem 0 4.5rem; border-bottom: 1px solid var(--border); }
 .hero h1 { font-size: var(--size-3xl); font-weight: var(--weight-heading); line-height: 1.1; margin-bottom: 1.25rem; }
 .hero .tagline { font-size: var(--size-lg); color: var(--muted); max-width: 540px; line-height: 1.5; margin-bottom: 2.25rem; }
 .hero-links { display: flex; flex-wrap: wrap; gap: 1.5rem; }
 
-/* ── Sections ── */
+/* -- Sections -- */
 section { padding: var(--section-gap) 0; border-bottom: 1px solid var(--border); }
 
-/* Gray uppercase label — 1.5x --size-xs */
+/* Gray uppercase label - 1.5x --size-xs */
 .gray-label {
-  font-size: calc(var(--size-xs) * 1.5);
+  font-size: calc(var(--size-xs) * 1.3);
   font-weight: var(--weight-ui);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.09em;
   color: var(--faint);
   margin-bottom: 2.5rem;
   display: block;
 }
 
-/* ── Pills ── */
+/* -- Pills -- */
 .pills { display: flex; flex-wrap: wrap; gap: 6px; font-size: var(--size-xs); }
 .pills.lg { font-size: var(--size-sm); }
 .pill {
@@ -83,14 +83,14 @@ section { padding: var(--section-gap) 0; border-bottom: 1px solid var(--border);
   padding: 0.25em 0.7em; border-radius: 4px; white-space: nowrap;
 }
 
-/* ── Row ── */
+/* -- Row -- */
 .row { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
 .row.loose { gap: 1.5rem; }
 
-/* ── Divided stack ── */
+/* -- Divided stack -- */
 .divided > * + * { margin-top: 3.5rem; padding-top: 3.5rem; border-top: 1px solid var(--border); }
 
-/* ── Text links ── */
+/* -- Text links -- */
 .text-link {
   text-decoration: none; color: var(--text);
   border-bottom: 1.5px solid var(--text); padding-bottom: 1px;
@@ -104,25 +104,25 @@ section { padding: var(--section-gap) 0; border-bottom: 1px solid var(--border);
 }
 .text-link.muted:hover { color: var(--text); border-color: var(--text); opacity: 1; }
 
-/* ── Package ── */
+/* -- Package -- */
 .pkg h2 { font-size: var(--size-xl); font-weight: var(--weight-heading); line-height: 1; }
 .pkg > .row { margin-bottom: 1.5rem; }
 .pkg .pills  { margin-bottom: 1.5rem; }
 .pkg .desc   { font-size: var(--size-md); line-height: 1.75; margin-bottom: 1.25rem; }
 .pkg .bullets { list-style: none; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.35rem; }
 .pkg .bullets li { font-size: var(--size-sm); color: var(--muted); padding-left: 1.1em; position: relative; }
-.pkg .bullets li::before { content: '\2014'; position: absolute; left: 0; color: var(--faint); }
+.pkg .bullets li::before { content: '\2022'; position: absolute; left: 0.3em; color: var(--faint); }
 
-/* ── Carousel ── */
+/* -- Carousel -- */
 .carousel {
   position: relative; margin-bottom: 1.75rem;
-  border-radius: 6px; overflow: hidden;
-  background: var(--surface); border: 1px solid var(--border);
+  overflow: hidden;
+  background: var(--surface);
   aspect-ratio: 16 / 9; user-select: none;
 }
-.carousel-track { display: flex; height: 100%; transition: transform 0.35s cubic-bezier(.4,0,.2,1); }
+.carousel-track { display: flex; height: 100%; transition: transform 0.25s cubic-bezier(.4,0,.2,1); }
 .carousel-slide  { flex: 0 0 100%; height: 100%; position: relative; }
-.carousel-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.carousel-slide img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 /* YouTube slide: thumbnail fills the slot, play button centered */
 .yt-play {
@@ -143,18 +143,26 @@ section { padding: var(--section-gap) 0; border-bottom: 1px solid var(--border);
   z-index: 1;
 }
 
-/* Arrow buttons — z-index above iframe */
+/* Transparent side zones - always above the iframe, capture pointer events
+   so the iframe never steals clicks meant for the arrows.
+   The center of the video stays fully interactive for YouTube controls. */
+.carousel-zone {
+  position: absolute; top: 0; bottom: 0; width: 60px;
+  z-index: 4;
+  display: flex; align-items: center; justify-content: center;
+}
+.carousel-zone.prev { left: 0; }
+.carousel-zone.next { right: 0; }
+
+/* Arrow buttons - inside the zone, no own positioning needed */
 .carousel-btn {
-  position: absolute; top: 50%; transform: translateY(-50%);
   width: 40px; height: 40px; background: rgba(255,255,255,0);
   border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
   opacity: 0; transition: opacity 0.2s, background 0.2s;
-  z-index: 3; border-radius: 50%; padding: 0;
+  border-radius: 50%; padding: 0; flex-shrink: 0;
 }
 .carousel:hover .carousel-btn { opacity: 1; }
 .carousel-btn:hover { background: rgba(255,255,255,0.75); }
-.carousel-btn.prev { left: 8px; }
-.carousel-btn.next { right: 8px; }
 
 /* Dots */
 .carousel-dots {
@@ -163,14 +171,14 @@ section { padding: var(--section-gap) 0; border-bottom: 1px solid var(--border);
 }
 .carousel:hover .carousel-dots { opacity: 1; }
 .dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: rgba(0,0,0,0.2); border: none; cursor: pointer; padding: 0;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(0,0,0,0.4); border: none; cursor: pointer; padding: 0;
   transition: background 0.2s;
 }
 .dot.active { background: rgba(0,0,0,0.65); }
 
-/* ── About ── */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3.5rem; }
+/* -- About -- */
+.about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; margin-bottom: 0.1rem; }
 @media (max-width: 600px) { .about-grid { grid-template-columns: 1fr; } }
 .about-bio p { font-size: var(--size-md); color: var(--muted); line-height: 1.75; }
 .about-bio p + p { margin-top: 1em; }
@@ -180,7 +188,7 @@ section { padding: var(--section-gap) 0; border-bottom: 1px solid var(--border);
 .title-game { font-size: var(--size-sm); font-weight: var(--weight-ui); color: var(--text); }
 .title-platform { font-size: var(--size-xs); color: var(--faint); }
 
-/* ── Contact ── */
+/* -- Contact -- */
 .contact-table { display: flex; flex-direction: column; gap: 0.85rem; }
 .row .lbl { font-size: var(--size-sm); font-weight: var(--weight-ui); color: var(--faint); min-width: 90px; }
 .row .val  { font-size: var(--size-sm); }

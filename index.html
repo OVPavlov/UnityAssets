@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oleg Pavlov — Senior Rendering Engineer</title>
+<title>Oleg Pavlov - Senior Rendering Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,33 +15,53 @@
   <div class="nav-inner">
     <a class="bold" href="#">Oleg Pavlov</a>
     <div class="nav-right">
-      <a href="#assets">Assets</a>
       <a href="#about">About</a>
+      <a href="#assets">Assets</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
 
 <div class="page">
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-bio">
+        <span class="gray-label" style="margin-bottom: 1.5rem;">About</span>
+        <p>Rendering engineer with 10+ years experience in Unity Engine, specializing in GPU performance and R&D.</p>
+        <p>Unity Asset Store publisher since 2014</p>
+        <p> <a class="text-link" href="https://assetstore.unity.com/publishers/2633">Visit Asset Store publisher page</a></p>
 
-  <!-- ════════════ HERO ════════════ -->
-  <div class="hero">
-    <h1>Oleg Pavlov</h1>
-    <p class="tagline">Senior Rendering Engineer. I know hardware, good at performance and building systems from the ground up.</p>
-    <div class="hero-links">
-      <a class="text-link muted" href="https://assetstore.unity.com/publishers/2633" target="_blank">Unity Asset Store</a>
-      <a class="text-link muted" href="https://www.linkedin.com/in/oleg-pavlov-1a3ba4a4/" target="_blank">LinkedIn</a>
-      <a class="text-link muted" href="https://twitter.com/OliverPDev" target="_blank">Twitter / @OliverPDev</a>
-      <a class="text-link muted" href="mailto:ovpavlovsup@gmail.com">ovpavlovsup@gmail.com</a>
+      </div>
+      <div>
+        <span class="gray-label" style="margin-bottom: 1.5rem;">Shipped titles</span>
+        <ul class="titles-list">
+          <li>
+            <span class="title-game">Escape From Tarkov</span>
+            <span class="title-platform">PC &middot; Battlestate Games</span>
+          </li>
+          <li>
+            <span class="title-game">Marvel Contest of Champions</span>
+            <span class="title-platform">(post-launch rendering overhaul)</span>
+            <span class="title-platform">iOS, Android &middot; Kabam Games</span>
+          </li>
+          <li>
+            <span class="title-game">Hot Wheels Infinite Loop</span>
+            <span class="title-platform">iOS, Android &middot; JoyCraft Games</span>
+          </li>
+          <li>
+            <span class="title-game">Contract Wars</span>
+            <span class="title-platform">Social &middot; absolutsoft</span>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ════════════ ASSETS ════════════ -->
+  <!-- ============ ASSETS ============ -->
   <section id="assets">
     <span class="gray-label">Unity Asset Store</span>
-
     <div class="divided">
-
       <!-- Fast PBR Particles -->
       <div class="pkg">
         <div class="row">
@@ -52,6 +72,31 @@
         <div class="carousel" data-carousel>
           <div class="carousel-track">
             <!-- YouTube video slide: data-yt holds the video ID -->
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/key-image/fc8619d1-81c1-4f91-ad96-efba475fc02e.webp" alt="Overview" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/2ee6e037-95fc-4d0f-bd87-96eca1d1d5dc.webp" alt="Energy Conservation" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/90af06b6-50c7-441b-b631-b56c548397cf.webp" alt="Inter-Frame Temporal Control" loading="lazy"></div>
+
+
+            <div class="carousel-slide" data-yt="Po3yn24Di5A">
+              <img src="https://img.youtube.com/vi/Po3yn24Di5A/maxresdefault.jpg"
+                   alt="Fast PBR Particles video" loading="lazy">
+              <button class="yt-play" aria-label="Play video">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <polygon points="8,5 19,11 8,17" fill="white"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="carousel-slide" data-yt="OLLg8QG0nqA">
+              <img src="https://img.youtube.com/vi/OLLg8QG0nqA/maxresdefault.jpg"
+                   alt="Fast PBR Particles video" loading="lazy">
+              <button class="yt-play" aria-label="Play video">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <polygon points="8,5 19,11 8,17" fill="white"/>
+                </svg>
+              </button>
+            </div>
+
             <div class="carousel-slide" data-yt="5CLLeD439Qo">
               <img src="https://img.youtube.com/vi/5CLLeD439Qo/maxresdefault.jpg"
                    alt="Fast PBR Particles video" loading="lazy">
@@ -61,72 +106,112 @@
                 </svg>
               </button>
             </div>
-            <div class="carousel-slide"><img src="https://placehold.co/1600x900/f0f0f0/aaaaaa?text=Fast+PBR+Particles" alt="Overview" loading="lazy"></div>
-            <div class="carousel-slide"><img src="https://placehold.co/1600x900/f0f0f0/aaaaaa?text=Physically+Based+Motion+Blur" alt="Motion blur" loading="lazy"></div>
-            <div class="carousel-slide"><img src="https://placehold.co/1600x900/f0f0f0/aaaaaa?text=Bokeh+Depth+of+Field" alt="Depth of field" loading="lazy"></div>
+
+            <div class="carousel-slide" data-yt="I8k-sIAspjM">
+              <img src="https://img.youtube.com/vi/I8k-sIAspjM/maxresdefault.jpg"
+                   alt="Fast PBR Particles video" loading="lazy">
+              <button class="yt-play" aria-label="Play video">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <polygon points="8,5 19,11 8,17" fill="white"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="carousel-slide" data-yt="5CLLeD439Qo">
+              <img src="https://img.youtube.com/vi/5CLLeD439Qo/maxresdefault.jpg"
+                   alt="Fast PBR Particles video" loading="lazy">
+              <button class="yt-play" aria-label="Play video">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <polygon points="8,5 19,11 8,17" fill="white"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/a7265a41-eebe-458b-8763-657d923ffa86.webp" alt="Temporal particle anatomy" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/3a2662ad-10c1-4fe9-9bc7-cb4d2e600fe3.webp" alt="PBR Motion Blur" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/c7dd277b-1611-402d-913b-dc1c30cd53b9.webp" alt="Motion blur" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/493d92d1-33f4-4136-a6df-586709418846.webp" alt="Editor" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/65696973-73a7-48ee-ada4-1acc147c1690.webp" alt="Code" loading="lazy"></div>
+
+
           </div>
-          <button class="carousel-btn prev" aria-label="Previous">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10L13 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <button class="carousel-btn next" aria-label="Next">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
+          <div class="carousel-zone prev">
+            <button class="carousel-btn prev" aria-label="Previous">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10L13 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="carousel-zone next">
+            <button class="carousel-btn next" aria-label="Next">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
           <div class="carousel-dots"></div>
         </div>
 
-        <p class="desc">A cinematic, physically based particle system with minimal CPU cost. Particle meshes are generated once — all simulation runs entirely on the GPU in a single draw call, making it compatible with nearly every graphics API including OpenGL ES 2.0 and DirectX 9.</p>
+        <p class="desc">Fast PBR Particles is a mesh-based particle system that generates its geometry once and then evaluates all particle behaviour entirely in the shader, enabling cinematic effects with minimal CPU cost and excellent platform coverage.</p>
+
+        <p>Core principles:</p>
         <ul class="bullets">
-          <li>Physically based motion blur from shutter interval — no post-process required</li>
-          <li>Physically based depth of field: bokeh radius derived from real camera parameters or volumes</li>
-          <li>Energy conservation: fixed per-particle energy over the shutter interval</li>
-          <li>Temporal controls: between-frame blending, closed shutter interval, turbulence</li>
-          <li>Lit and emissive particle shaders</li>
-          <li>Deterministic playback and time reversal</li>
-          <li>Accurate trajectory integrals for gravity, drag, and wind</li>
-          <li>Static lights mode: bokeh and camera motion blur for non-moving light sources</li>
-          <li>Targets OpenGL ES 2.0, DirectX 9 and all modern APIs</li>
+          <li>Minimal CPU workload: particle meshes are built once; there is no per-frame CPU simulation, all temporal evolution is evaluated on the GPU with single-draw-call rendering.</li>
+          <li>Broad graphics API support: despite the simulation happening on GPU, it doesn’t require any advanced features targeting nearly all mainstream graphics APIs including OpenGL(ES) 2.0, DirectX 9.0, and all modern API. while preserving the same feature set.</li>
+          <li>Physically based imaging: motion blur, depth of field, inter-frame temporal control, and exposure are derived from physical optical phenomenons with strict energy conservation.</li>
+        </ul>
+        <p>Features:</p>
+        <ul class="bullets">
+          <li>Physically based motion blur from shutter interval by stretching the particle footprint (no post-process required).</li>
+          <li>Physically based depth of field: bokeh radius derived from physical camera paremeters or volumes.</li>
+          <li>Energy conservation: fixed per-particle energy over the shutter interval.</li>
+          <li>Temporal controls: between frames blending, closed shutter interval, turbulence.</li>
+          <li>Lit and emissive particle shaders.</li>
+          <li>Deterministic playback and time reversal.</li>
+          <li>Acurate trajectory integrals accout for gravity, drag and wind.</li>
+          <li>Static lights mode: bokeh + camera motion blur for non-moving light points.</li>
+          <li>Made to be extended.</li>
         </ul>
         <div class="pills">
-          <span class="pill">Built-in RP</span>
-          <span class="pill">URP</span>
-          <span class="pill">HDRP</span>
-          <span class="pill">Unity 2022.3+</span>
-          <span class="pill">GPU Particles</span>
+          <span class="pill">Physically Based Rendering</span>
+          <span class="pill">Cinematic</span>
+          <span class="pill">Bokeh</span>
+          <span class="pill">Deterministic</span>
           <span class="pill">PBR</span>
           <span class="pill">Mobile Compatible</span>
         </div>
-        <a class="text-link" href="https://assetstore.unity.com/preview/362030/1261310" target="_blank">View on Asset Store &rarr;</a>
+        <!-- <a class="text-link" href="https://assetstore.unity.com/preview/362030/1261310" target="_blank">View on Asset Store &rarr;</a> -->
       </div>
 
       <!-- Styliser -->
       <div class="pkg">
         <div class="row">
           <h2>Styliser</h2>
-          <span class="pill">$10</span>
-          <span class="pill">202 favourites</span>
         </div>
 
         <div class="carousel" data-carousel>
           <div class="carousel-track">
-            <div class="carousel-slide"><img src="https://placehold.co/1600x900/f0f0f0/aaaaaa?text=Styliser" alt="Styliser overview" loading="lazy"></div>
-            <div class="carousel-slide"><img src="https://placehold.co/1600x900/f0f0f0/aaaaaa?text=Color+Band+Control" alt="Color band control" loading="lazy"></div>
-            <div class="carousel-slide"><img src="https://placehold.co/1600x900/f0f0f0/aaaaaa?text=Pattern+Fill+Detail" alt="Pattern fill" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/96fa6369-4cec-4d43-825b-97d237657ce0.webp" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/2e571057-aefc-4235-95b2-96ef2ecd3b57.webp" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/2fea150b-c7f8-4d9a-8115-4794c8576cfd.webp" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/4d9d19c2-5703-40e4-8347-f1f40921fd46.webp" loading="lazy"></div>
+
           </div>
-          <button class="carousel-btn prev" aria-label="Previous">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10L13 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <button class="carousel-btn next" aria-label="Next">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
+          <div class="carousel-zone prev">
+            <button class="carousel-btn prev" aria-label="Previous">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10L13 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="carousel-zone next">
+            <button class="carousel-btn next" aria-label="Next">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
           <div class="carousel-dots"></div>
         </div>
 
         <p class="desc">A fullscreen camera stylisation effect that splits the image into distinct color bands and fills the transitions between them with tileable patterns. The light position of each color band is individually controllable, giving artists precise creative control over the resulting look.</p>
         <ul class="bullets">
-          <li>Splits image into multiple discrete color levels</li>
-          <li>Pattern-filled transitions between color bands</li>
           <li>Per-color light position control</li>
+          <li>Use any pattern</li>
           <li>Easy to set up</li>
+          <li>Last Update 2017</li>
         </ul>
         <div class="pills">
           <span class="pill">VFX / Shaders</span>
@@ -140,29 +225,52 @@
       <div class="pkg">
         <div class="row">
           <h2>Dithering</h2>
-          <span class="pill">$5</span>
-          <span class="pill">78 favourites</span>
+          <span class="pill">Deprecated for lack of support</span>
+
         </div>
 
         <div class="carousel" data-carousel>
           <div class="carousel-track">
-            <div class="carousel-slide"><img src="https://placehold.co/1600x900/f0f0f0/aaaaaa?text=Dithering" alt="Dithering overview" loading="lazy"></div>
-            <div class="carousel-slide"><img src="https://placehold.co/1600x900/f0f0f0/aaaaaa?text=8-Bit+Color+Palette" alt="8-bit palette" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/key-image/5aedbb95-12bf-4c46-8b94-add2834981b0.webp" alt="" loading="lazy"></div>
+
+            <div class="carousel-slide" data-yt="6_v8N-iHqR8">
+              <img src="https://img.youtube.com/vi/6_v8N-iHqR8/maxresdefault.jpg"
+                   alt="Video description here" loading="lazy">
+              <button class="yt-play" aria-label="Play video">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <polygon points="8,5 19,11 8,17" fill="white"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/3187ec11-b227-4e76-8c31-237b54c95b6a.webp" alt="" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/15bbe181-d2a0-47ef-807e-4a30666ccb74.webp" alt="" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/56005e73-e4a2-4d9d-88ae-d9d1afe7e58e.webp" alt="" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/690dd2b7-9e48-4e23-8e33-d89b9954184e.webp" alt="" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/9590ebea-cf1b-462c-9c39-3e033046a36e.webp" alt="" loading="lazy"></div>
+            <div class="carousel-slide"><img src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/df73e9ae-a83d-40b3-87c4-eca7edbb9388.webp" alt="" loading="lazy"></div>
           </div>
-          <button class="carousel-btn prev" aria-label="Previous">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10L13 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <button class="carousel-btn next" aria-label="Next">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
+          <div class="carousel-zone prev">
+            <button class="carousel-btn prev" aria-label="Previous">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10L13 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="carousel-zone next">
+            <button class="carousel-btn next" aria-label="Next">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
           <div class="carousel-dots"></div>
         </div>
 
-        <p class="desc">A fast post-processing effect that simulates a limited color palette, recreating the look of 8-bit hardware. Extremely lightweight — Shader Model 2.0, maximum performance on desktop, 60 FPS on a Google Nexus 4.</p>
+        <p class="desc">A post-processing effect that simulates a limited color palette, recreating the look of 8-bit hardware. Lightweight - Shader Model 2.0, maximum performance on desktop, 60 FPS on a Google Nexus 4.</p>
         <ul class="bullets">
-          <li>Simulates 8-bit limited color palette</li>
-          <li>Shader Model 2.0 — widest possible hardware compatibility</li>
+          <li>Full control over how many bits per channel</li>
+          <li>HSV mode</li>
+          <li>Custom patterns</li>
+          <li>Shader Model 2.0 - widest possible hardware compatibility</li>
           <li>60 FPS on Google Nexus 4</li>
+          <li>Last Update 2017</li>
         </ul>
         <div class="pills">
           <span class="pill">VFX / Shaders</span>
@@ -176,56 +284,7 @@
     </div>
   </section>
 
-  <!-- ════════════ ABOUT ════════════ -->
-  <section id="about">
-    <span class="gray-label">About</span>
-    <div class="about-grid">
-      <div class="about-bio">
-        <p>Rendering engineer with 10+ years in Unity, specializing in GPU performance, physically based rendering, and shader-driven systems. My work spans from mobile-first optimization to cutting-edge PBR effects on PC.</p>
-        <p>I've shipped graphics systems for live games, built novel culling algorithms filed under the Canadian SR&amp;ED R&amp;D program, and developed toolsets that let artists push visual quality without touching performance budgets.</p>
-        <p>My Unity Asset Store packages bring that same engineering discipline into easy-to-use, reusable form.</p>
-      </div>
-      <div>
-        <div class="titles-label">Shipped titles</div>
-        <ul class="titles-list">
-          <li>
-            <span class="title-game">Escape From Tarkov</span>
-            <span class="title-platform">PC &middot; Battlestate Games</span>
-          </li>
-          <li>
-            <span class="title-game">Hot Wheels Infinite Loop</span>
-            <span class="title-platform">iOS, Android &middot; JoyCraft Games</span>
-          </li>
-          <li>
-            <span class="title-game">Contract Wars</span>
-            <span class="title-platform">Social &middot; absolutsoft</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <span class="gray-label" style="margin-bottom: 1.25rem;">Skills</span>
-    <div class="pills lg">
-      <span class="pill">GPU Particle Systems</span>
-      <span class="pill">Post-Processing Effects</span>
-      <span class="pill">Physically Based Rendering</span>
-      <span class="pill">Shader Programming</span>
-      <span class="pill">HLSL / GLSL</span>
-      <span class="pill">DX9 &ndash; Vulkan</span>
-      <span class="pill">OpenGL ES 2&ndash;3</span>
-      <span class="pill">Metal</span>
-      <span class="pill">SRP / URP / Custom Pipelines</span>
-      <span class="pill">Mobile GPU Optimization</span>
-      <span class="pill">Draw Call Reduction</span>
-      <span class="pill">GPU Skinning</span>
-      <span class="pill">Real-Time Lighting</span>
-      <span class="pill">Procedural Weather Systems</span>
-      <span class="pill">Unity3D (since 2012)</span>
-      <span class="pill">C#</span>
-    </div>
-  </section>
-
-  <!-- ════════════ CONTACT ════════════ -->
+  <!-- ============ CONTACT ============ -->
   <section id="contact">
     <span class="gray-label">Contact</span>
     <div class="contact-table">
@@ -250,7 +309,7 @@
 
 </div>
 
-<footer>Oleg Pavlov &middot; Unity Asset Store publisher since 2012</footer>
+<footer>Oleg Pavlov &middot; Unity Asset Store publisher since 2014</footer>
 
 <script src="carousel.js"></script>
 </body>
